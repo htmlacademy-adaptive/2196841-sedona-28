@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона. Каталог фото и видео</title>
+</head>
+<body class="page__body">
+  <div class="page__container">
+    <header class="header">
+      <a class="header__logo" href="index.html">
+        <img class="header__logo-image" src="img/svg/logo-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
+      </a>
+      <nav class="nav">
+        <button class="nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <!-- Здесь будет спрайт -->
+          <svg focusable="false"><use></use></svg>
+        </button>
+        <div class="nav__wrapper">
+          <ul class="nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link"  href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" aria-current="page" href="catalog.html">
+                Фото и видео
+              </a>
+            </li>
+          </ul>
+          <ul class="nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__link" href="form.html">
+                Форма Отзыва
+              </a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link" href="https://htmlacademy.ru/intensive/adaptive">
+                HTML Academy
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="main-container">
+      <section class="gallery">
+        <header class="gallery__header">
+          <img class="gallery__hero" src="img/svg/hero-logo-small.svg" width="229" height="39" alt="Логотип города Седона.">
+          <h1 class="gallery__title">Фото и видео</h1>
+          <p class="gallery__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        </header>
+        <ul class="gallery__list">
+          <li class="gallery__item gallery__item--foto-wide">
+            <img class="gallery__photo" src="img/gallery-nonnative-spaces.jpg" width="280" height="280" alt="Дорога в Аризоне.">
+            <div class="gallery__container">
+              <h2 class="gallery__signature">Неродные просторы</h2>
+              <p class="gallery__author">Автор фото: Борис</p>
+              <button class="gallery__like-button button" type="button">
+                <span class="visually-hidden">Поставить лайк</span>
+                <span class="gallery__rating">1350</span>
+              </button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__photo" src="img/gallery-local-vegetation.jpg" width="280" height="280" alt="Кактусовая веточка.">
+            <div class="gallery__container">
+              <h2 class="gallery__signature">Местная растительность</h2>
+              <p class="gallery__author">Автор фото: Сергей</p>
+              <button class="gallery__like-button button" type="button">
+                <span class="visually-hidden">Поставить лайк</span>
+                <span class="gallery__rating">143</span>
+              </button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__photo" src="img/gallery-road-to-the-north.jpg" width="280" height="280" alt="Горная дорога с орлиной высоты.">
+            <div class="gallery__container">
+              <h2 class="gallery__signature">Дорога на север</h2>
+              <p class="gallery__author">Автор фото: Петр</p>
+              <button class="gallery__like-button button" type="button">
+                <span class="visually-hidden">Поставить лайк</span>
+                <span class="gallery__rating">96</span>
+              </button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <img class="gallery__photo" src="img/gallery-devil-bridge.jpg" width="280" height="280" alt="Хрестоматийный вид на Мост дьявола.">
+            <div class="gallery__container">
+              <h2 class="gallery__signature">Мост дьявола</h2>
+              <p class="gallery__author">Автор фото: Антон</p>
+              <button class="gallery__like-button button" type="button">
+                <span class="visually-hidden">Поставить лайк</span>
+                <span class="gallery__rating">254</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+        <p class="gallery__title">Все еще сомневаетесь?</p>
+        <p class="gallery__subtitle">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <div class="gallery__video-container">
+          <img class="gallery__photo-poster-1" src="img/gallery-poster-1.jpg" width="280" height="177" alt="На серпантине.">
+          <button class="gallery__video-button button" type="button">
+            <span class="visually-hidden">Запустить видео.</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <span class="visually-hidden">Наш хештег:</span>
+      <a class="page-footer__link hashtag" href="#">
+        <p class="hashtag__text">#visitSEDONA</p>
+      </a>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link button" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы ВКонтакте.</span>
+            <!-- Здесь будет спрайт -->
+            <svg focusable="false"><use></use></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link button" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Наш Телеграм.</span>
+            <!-- Здесь будет спрайт -->
+          <svg focusable="false"><use></use></svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link button" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Наш канал на YouTube.</span>
+            <!-- Здесь будет спрайт -->
+          <svg focusable="false"><use></use></svg>
+          </a>
+        </li>
+      </ul>
+      <a class="page-footer__link made-in" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="made-in__text">Разработано</span>
+        <span class="visually-hidden">в HTML Academy.</span>
+        <!-- Здесь будет спрайт -->
+        <svg focusable="false"><use></use></svg>
+      </a>
+    </footer>
+  </div>
+</body>
+</html>
