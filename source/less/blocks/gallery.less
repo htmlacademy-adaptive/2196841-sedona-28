@@ -1,0 +1,103 @@
+.gallery__header {
+  width: 100%;
+  height: 158px;
+  background-color: @base-color;
+  background-image: url("/img/svg/hero-divider.svg"), url("/img/hero-background.jpg");
+  background-position: center bottom, center bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 52px;
+  margin-bottom: 36px;
+}
+
+.gallery__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #000000;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.gallery__subtitle {
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0 0 28px 0;
+}
+
+.gallery__list {
+  .list-reset();
+}
+
+.gallery__item {
+  width: 100%;
+  padding: 24px 20px;
+  display: grid;
+}
+
+.gallery__photo {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.gallery__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.gallery__signature {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery__author {
+  padding: 0;
+  margin: 0 0 11px 0;
+}
+
+.gallery__like-button {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.gallery__rating {
+  font-weight: 700;
+  color: #000000;
+}
+
+.gallery__video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.gallery__photo-poster-1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery__video-button {
+  width: 48px;
+  height: 54px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+}

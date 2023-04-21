@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Седона. Форма Отзыва</title>
 </head>
 <body class="page__body">
@@ -11,7 +12,7 @@
         <img class="header__logo-image" src="img/svg/logo-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
       <nav class="nav">
-        <button class="nav__toggle" type="button">
+        <button class="nav__toggle button" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <!-- Здесь будет спрайт -->
           <svg focusable="false"><use></use></svg>
@@ -48,9 +49,9 @@
       <section class="guest-book">
         <header class="guest-book__header">
           <img class="guest-book__hero" src="img/svg/hero-logo-small.svg" width="229" height="39" alt="Логотип города Седона.">
-          <h1 class="guest-book__title">Оставьте свой отзыв</h1>
-          <p class="guest-book__subtitle">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </header>
+        <h1 class="guest-book__title">Оставьте свой отзыв</h1>
+        <p class="guest-book__subtitle">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form class="guest-book__form form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="form__group">
             <legend class="form__title">Представьтесь:</legend>
@@ -64,9 +65,9 @@
           <fieldset class="form__group">
             <legend class="form__title">Контактная информация:</legend>
             <label class="form__label" for="phone">Контактный телефон*:</label>
-            <input class="form__field" placeholder="Введите телефон" type="tel" name="phone" id="phone" required>
+            <input class="form__field form__field--phone" placeholder="Введите телефон" type="tel" name="phone" id="phone" required>
             <label class="form__label" for="email">Электронная почта*:</label>
-            <input class="form__field" placeholder="Введите e-mail" type="email" name="email" id="email" required>
+            <input class="form__field form__field--email" placeholder="Введите e-mail" type="email" name="email" id="email" required>
           </fieldset>
           <fieldset class="form__group">
             <legend class="form__title">Ваше общее впечатление:</legend>
@@ -132,8 +133,8 @@
     </main>
     <footer class="page-footer">
       <span class="visually-hidden">Наш хештег:</span>
-      <a class="page-footer__link hashtag" href="#">
-        <p class="hashtag__text">#visitSEDONA</p>
+      <a class="page-footer__link" href="#">
+        <p class="page-footer__text page-footer__text--hashtag">#visitSEDONA</p>
       </a>
       <ul class="social">
         <li class="social__item">
@@ -158,8 +159,8 @@
           </a>
         </li>
       </ul>
-      <a class="page-footer__link made-in" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="made-in__text">Разработано</span>
+      <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <p class="page-footer__text page-footer__text--made-in">Разработано</p>
         <span class="visually-hidden">в HTML Academy.</span>
         <!-- Здесь будет спрайт -->
         <svg focusable="false"><use></use></svg>
