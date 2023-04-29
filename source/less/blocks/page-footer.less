@@ -3,6 +3,10 @@
   display: grid;
   gap: 30px;
   align-content: center;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .page-footer__link {
