@@ -1,8 +1,8 @@
 .gallery__header {
   width: 100%;
   height: 158px;
-  background-color: @base-color;
-  background-image: url("/img/svg/hero-divider.svg"), url("/img/hero-background.jpg");
+  background-color: @base-background-color;
+  background-image: url("../../img/svg/hero-divider.svg"), url("../../img/hero-background.jpg");
   background-position: center bottom, center bottom;
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto;
@@ -19,35 +19,77 @@
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
-  padding: 0;
+  padding: @base-indent;
   margin: 0 0 24px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .gallery__subtitle {
   text-transform: uppercase;
-  padding: 0;
+  padding: @base-indent;
   margin: 0 0 28px 0;
 }
 
 .gallery__list {
   .list-reset();
+  display: grid;
+  margin: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 60px 62px 60px;
+    grid-template-columns: repeat(2, 324px);
+    gap: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 62px 0;
+    grid-template-columns: repeat(3, 400px);
+    gap: 0;
+  }
 }
 
 .gallery__item {
   width: 100%;
-  padding: 24px 20px;
-  display: grid;
+  padding: 24px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  &--foto-wide {
+    @media (min-width: @tablet-width) {
+      grid-column: 1 / -1;
+    }
+  }
 }
 
 .gallery__photo {
+  width: 100%;
+  object-fit: cover;
   display: block;
   margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .gallery__container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    height: 80px;
+    background-color: #f2f2f2;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 22px 20px 15px 20px;
+  }
 }
 
 .gallery__signature {
@@ -80,16 +122,29 @@
 }
 
 .gallery__video-container {
+  width: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  margin: 0 auto 33px auto;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+    margin: 0 auto 40px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+    margin: 0 auto 84px auto;
+  }
 }
 
 .gallery__photo-poster-1 {
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .gallery__video-button {

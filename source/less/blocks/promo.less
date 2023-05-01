@@ -1,8 +1,17 @@
 .promo {
   .list-reset();
-  display: flex;
-  flex-direction: column;
+  display: grid;
   background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(3, 256px);
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(3, 400px);
+    grid-column: 1 / -1;
+  }
 }
 
 .promo__item {
@@ -21,7 +30,7 @@
 
 .promo__text {
   text-transform: uppercase;
-  color: #333333;
+  color: @base-text-color;
   padding: 0;
   margin: 0;
 }

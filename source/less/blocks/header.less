@@ -1,9 +1,23 @@
 .header {
   width: 100%;
   min-height: 56px;
+  position: relative;
 }
 
 .header__logo {
-  display: flex;
-  justify-content: center;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  width: 185px;
+  height: 96px;
+  top: 0;
+  left: 67px;
+
+  @media (min-width: @tablet-width) {
+    left: 291px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 507px;
+  }
 }
