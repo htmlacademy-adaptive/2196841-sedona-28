@@ -2,6 +2,7 @@
   .list-reset();
   display: flex;
   flex-direction: column;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -20,10 +21,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(1, 1, 1, 0.2);
 
   @media (min-width: @tablet-width) {
     background-color: #ffffff;
+    border: none;
   }
+}
+
+.user-list__item:last-child {
+  border-bottom: none;
 }
 
 .user-list__link {

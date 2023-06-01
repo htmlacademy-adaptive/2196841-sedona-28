@@ -12,8 +12,9 @@
       <a class="header__logo" href="index.html">
         <img class="header__logo-image" src="img/svg/logo-sedona.svg" width="185" height="96" alt="Логотип города Седона.">
       </a>
-      <nav class="nav">
-        <button class="nav__toggle button nav__toggle--show" type="button">
+      <!-- Классы nav--closed и nav--opened для управления бургерным меню в мобильной версии -->
+      <nav class="nav nav--closed nav--nojs">
+        <button class="nav__toggle button" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <!-- Здесь будет спрайт -->
           <svg focusable="false"><use></use></svg>
@@ -76,22 +77,28 @@
             <legend class="form__title">Ваше общее впечатление:</legend>
             <ul class="form__list form__list--radio">
               <li class="form__item">
-                <label class="control">
-                  <input class="visually-hidden control__input" type="radio" name="impression" value="positive" checked>
-                  <span class="control__label">Скорее положительное</span>
-                </label>
+                <!-- <label class="control"> -->
+                  <!-- <input class="visually-hidden control__input" type="radio" name="impression" value="positive" checked> -->
+                  <!-- <span class="control__label">Скорее положительное</span> -->
+                <!-- </label> -->
+                <input class="form__control-input visually-hidden" type="radio" id="positive" name="impression" value="positive" checked>
+                <label class="form__control-label" for="positive">Скорее положительное</label>
               </li>
               <li class="form__item">
-                <label class="control">
-                  <input class="visually-hidden control__input" type="radio" name="impression" value="negative">
-                  <span class="control__label">Скорее отрицательное</span>
-                </label>
+                <!-- <label class="control"> -->
+                  <!-- <input class="visually-hidden control__input" type="radio" name="impression" value="negative"> -->
+                  <!-- <span class="control__label">Скорее отрицательное</span> -->
+                <input class="form__control-input visually-hidden" type="radio" id="negative" name="impression" value="negative">
+                <label class="form__control-label" for="negative">Скорее отрицательное</label>
+                <!-- </label> -->
               </li>
               <li class="form__item">
-                <label class="control">
-                  <input class="visually-hidden control__input" type="radio" name="impression" value="he did not decide">
-                  <span class="control__label">Затрудняюсь ответить</span>
-                </label>
+                <!-- <label class="control"> -->
+                  <!-- <input class="visually-hidden control__input" type="radio" name="impression" value="he did not decide"> -->
+                  <!-- <span class="control__label">Затрудняюсь ответить</span> -->
+                <input class="form__control-input visually-hidden" type="radio" id="no-answer" name="impression" value="he did not decide">
+                <label class="form__control-label" for="no-answer">Затрудняюсь ответить</label>
+                <!-- </label> -->
               </li>
             </ul>
           </fieldset>
@@ -99,28 +106,40 @@
             <legend class="form__title">Посещенные достопримечательности:</legend>
             <ul class="form__list form__list--checkbox">
               <li class="form__item">
-                <label class="control">
-                  <input class="visually-hidden control__input" type="checkbox" name="Devil bridge" checked>
-                  <span class="control__label">Мост Дьявола</span>
-                </label>
+                <!-- <label class="control"> -->
+                  <!-- <input class="visually-hidden form__control-input" type="checkbox" name="Devil bridge" checked> -->
+                  <!-- <span class="control__label">Мост Дьявола</span> -->
+                <!-- </label> -->
+                <input class="form__control-input visually-hidden" type="checkbox" id="devils-bridge" name="devils-bridge" checked>
+                <span class="form__mark"></span>
+                <label class="form__control-label" for="devils-bridge">Мост Дьявола</label>
               </li>
               <li class="form__item">
-                <label class="control">
-                  <input class="visually-hidden control__input" type="checkbox" name="Mount Bell" checked>
-                  <span class="control__label">Гора-Колокол</span>
-                </label>
+                <!-- <label class="control"> -->
+                  <!-- <input class="visually-hidden control__input" type="checkbox" name="Mount Bell" checked> -->
+                  <!-- <span class="control__label">Гора-Колокол</span> -->
+                <!-- </label> -->
+                <input class="form__control-input visually-hidden" type="checkbox" id="mount-bell" name="mount-bell" checked>
+                <span class="form__mark"></span>
+                <label class="form__control-label" for="mount-bell">Гора-Колокол</label>
               </li>
               <li class="form__item">
-                <label class="control">
-                  <input class="visually-hidden control__input" type="checkbox" name="Slide Park" checked>
-                  <span class="control__label">Слайд-парк</span>
-                </label>
+                <!-- <label class="control"> -->
+                  <!-- <input class="visually-hidden control__input" type="checkbox" name="Slide Park" checked> -->
+                  <!-- <span class="control__label">Слайд-парк</span> -->
+                <!-- </label> -->
+                <input class="form__control-input visually-hidden" type="checkbox" id="slide-park" name="slide-park" checked>
+                <span class="form__mark"></span>
+                <label class="form__control-label" for="slide-park">Слайд-парк</label>
               </li>
               <li class="form__item">
-                <label class="control">
-                  <input class="visually-hidden control__input" type="checkbox" name="Red Rocks">
-                  <span class="control__label">Красные скалы</span>
-                </label>
+                <!-- <label class="control"> -->
+                  <!-- <input class="visually-hidden control__input" type="checkbox" name="Red Rocks"> -->
+                  <!-- <span class="control__label">Красные скалы</span> -->
+                <!-- </label> -->
+                <input class="form__control-input visually-hidden" type="checkbox" id="red-rocks" name="red-rocks">
+                <span class="form__mark"></span>
+                <label class="form__control-label" for="red-rocks">Красные скалы</label>
               </li>
             </ul>
           </fieldset>
@@ -170,5 +189,6 @@
       </a>
     </footer>
   </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
