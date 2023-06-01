@@ -2,15 +2,19 @@
   width: 100%;
   height: 389px;
   background-color: @base-background-color;
-  background-image: url("../../img/svg/hero-divider.svg"), url("../../img/hero-background.jpg");
+  background-image: url("../img/svg/hero-divider.svg"), url("../img/hero-background.jpg");
   background-position: center bottom, center top;
   background-repeat: no-repeat, no-repeat;
-  background-size: 100% auto, 100% 100%;
+  background-size: 200% auto, 100% 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 90px;
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    background-size: 100% auto, 100% 100%;
+  }
 }
 
 .advantages__hero {
@@ -54,6 +58,7 @@
 .advantages__item {
   background-color: @secondary-background-color;
   padding: 24px 18px;
+  position: relative;
 
   &--foto-left,
   &--foto-right {
@@ -71,6 +76,28 @@
       grid-column: 1 / -1;
       display: grid;
       grid-template-columns: 400px 800px;
+    }
+  }
+
+  @media (max-width: @mobile-width) {
+    &:first-child::before {
+      width: 320px;
+      height: 37px;
+      content: url("../img/svg/hero-divider-bottom.svg");
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &--dividing-line::before {
+      width: 284px;
+      height: 1px;
+      background-color: #d6d6d6;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 18px;
     }
   }
 }

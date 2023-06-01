@@ -1,8 +1,44 @@
 .form {
   width: 100%;
-  padding: 0;
+  padding: 0 20px;
   margin: 0;
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+  }
+}
+
+.form__group {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  // padding: 24px 20px;
+  padding: 0;
+  // Здесь разные нижние отступы
+  position: relative;
+  margin: 0 0 48px 0;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 0 73px 0;
+  }
+}
+
+// Линейки в мобильной версии; наверное, нужно вводить модификаторы для блоков
+.form__group::before {
+  @media (max-width: @mobile-width) {
+    width: 320px;
+    height: 1px;
+    background-color: #e5e5e5;
+    content: "";
+    position: absolute;
+    top: -65px;
+    left: -20px;
+  }
 }
 
 .form__title {
@@ -14,24 +50,40 @@
   color: #000000;
   text-align: center;
   padding: 0;
-  margin: 0;
+  margin: 0 0 28px 0;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 
   @media (min-width: @tablet-width) {
     font-size: 21px;
   }
 }
 
-.form__group {
-  border: none;
-  display: flex;
-  flex-direction: column;
-  padding: 24px 20px;
-  margin: 0;
-}
-
 .form__wrapper {
+  width: 100%;
+  position: relative;
+  margin-bottom: 0;
+
   @media (min-width: @tablet-width) {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 63px;
+
+    &::after {
+      width: 1px;
+      height: 100%;
+      background-color: #d8d8d8;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 71px;
   }
 }
 
@@ -43,11 +95,12 @@
   text-transform: uppercase;
   color: @base-text-color;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 16px;
 }
 
 .form__field {
-  width: 100%;
+  // width: 100%;
+  width: 280px;
   height: 58px;
   background-color: @base-form-color;
   border: none;
@@ -57,12 +110,22 @@
   font-weight: 700;
   color: #000000;
   padding: 16px;
-  margin: 0;
+  margin: 0 0 16px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 295px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 430px;
+  }
 }
 
 .form__list {
   .list-reset();
   display: grid;
+  row-gap: 56px;
+  // скорректировать этот отступ по макету
 
   &--radio {
     @media (min-width: @tablet-width) {
@@ -83,6 +146,86 @@
       grid-template-columns: repeat(4, 1fr);
     }
   }
+}
+
+.form__control-label {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.form__control-input[type="radio"] + .form__control-label {
+  cursor: pointer;
+  // font-weight: 700;
+  // text-transform: none;
+  // font-size: 18px;
+  // padding: 10px 0 10px 62px;
+  display: block;
+  padding-left: 62px;
+}
+
+.form__control-input[type="radio"] + .form__control-label::before {
+  position: absolute;
+  content: "";
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: @base-form-color;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form__control-input[type="radio"]:checked + .form__control-label::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: @base-text-color;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form__control-input[type="checkbox"] ~ .form__control-label {
+  cursor: pointer;
+  // font-weight: 700;
+  // text-transform: none;
+  // font-size: 18px;
+  // padding: 10px 0 10px 62px;
+  display: block;
+  padding-left: 62px;
+}
+
+.form__control-input[type="checkbox"] ~ .form__control-label::before {
+  position: absolute;
+  content: "";
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  background-color: @base-form-color;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form__control-input[type="checkbox"]:checked ~ .form__control-label::after {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("../img/svg/stack.svg") no-repeat;
+  // этой графики пока нет, вместо нее - background-color
+  background-color: @base-text-color;
 }
 
 .form__field-additional {
@@ -116,6 +259,7 @@
 .form__button {
   width: 280px;
   min-height: 58px;
+  color: #ffffff;
   background-color: @base-background-color;
   margin: 56px auto 3px auto;
 
